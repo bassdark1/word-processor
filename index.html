@@ -1,0 +1,62 @@
+<!-- Updated index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Add this script tag in the head section of your HTML file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+<!-- Update this script tag in the head section of your HTML file -->
+<script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+
+    <!-- Add these script tags in the head section of your HTML file -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Word Processor</title>
+</head>
+<body>
+    <div class="container">
+        <button onclick="openModal()">Settings</button>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2>Settings</h2>
+                <label for="pdfName">Enter PDF Name:</label>
+                <input type="text" id="pdfName" placeholder="Enter PDF name">
+                <button onclick="saveAsPDF()">Save as PDF</button>
+            </div>
+        </div>
+        <!-- Add this button in your HTML -->
+
+        <div class="editor-controls">
+            <label for="fontSize">Size:</label>
+            <select id="fontSize">
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="14">14</option>
+                <option value="16">16</option>
+                <option value="18">18</option>
+                <option value="20">20</option>
+            </select>
+            <label for="fontFamily">Family:</label>
+            <select id="fontFamily">
+                <option value="Arial">Arial</option>
+                <option value="Times New Roman">Times New Roman</option>
+                <option value="Courier New">Courier New</option>
+                <option value="Georgia">Georgia</option>
+            </select>
+            <label for="fontColor">Color:</label>
+            <input type="color" id="fontColor" value="#000000">
+        </div>
+
+    </div>
+    <div id="editor" contenteditable="true"></div>
+
+
+    <script src="https://rawgit.com/eKoopmans/html2pdf/master/dist/html2pdf.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
